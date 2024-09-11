@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Student</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="icon" href="images/icon.svg">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="admin-wrapper">
+        <nav class="admin-nav">
+            <div class="content-wrapper">
+                <h2 class="admin-title">Admin Students</h2>
+                <label>
+                    <input class="chose-img" type="file">
+                    <img class="admin-avatar" src="images/admin-avatar.png" alt="Avatar" width="141" height="160">
+                </label>
+                <strong class="admin-strong">Karthi Madesh</strong>
+                <p class="admin-text">Admin</p>
+            </div>
+            <ul class="admin-list">
+                <li class="admin-item">
+                    <img class="admin-img" src="images/icon-hat.svg" alt="Icon" width="20" height="12">
+                    Students
+                </li>
+            </ul>
+            <button onclick="handleLogOutBtn()" class="logout-btn">
+                Logout
+                <img src="images/logout-icon.svg" alt="Logout-Icon" width="17" height="17">
+            </button>
+        </nav>
+        <div class="admin-second-wrapper">
+            <div class="wrapper-content">
+                <img src="images/exit-icon.svg" alt="Exit-Icon" width="18" height="18">
+                <div class="label-wrapper">
+                    <label class="admin-label">
+                        <input class="admin-input" id="search-input" autocomplete="off" type="text"
+                            placeholder="Search..." name="searching">
+                        <img class="img" src="./images/loupe.svg" alt="Loupe-Img" width="14" height="14">
+                    </label>
+                </div>
+                <img src="images/notification-icon.svg" alt="Notify-Icon" width="17" height="20">
+            </div>
+            <div class="wrpapper">
+                <h2 class="wrapper-title">Students List</h2>
+                <img src="images/select.svg" alt="select-icon" width="14" height="22">
+                <button onclick="hanndelAddStudentBtn()" class="wrapper-btn">ADD NEW STUDENT</button>
+            </div>
+            <ul class="wrapper-list">
+                <li class="wrapper-item">Name</li>
+                <li class="wrapper-item">Email</li>
+                <li class="wrapper-item">Phone</li>
+                <li class="wrapper-item">Enroll Number</li>
+                <li class="wrapper-item">Date admission</li>
+            </ul>
+            <div class="list-wrapper">
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper duration-300 scale-0 fixed top-0 bottom-0 left-0 right-0 backdrop-blur"
+        id="modal-wrapper">
+        <div id="modal-inner"
+            class="modal-inner duration-300 w-[600px] left-0 right-0 m-auto rounded-lg shadow-xl bg-[#838996]"></div>
+    </div>
+    <script src="js/Admin/admin.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
